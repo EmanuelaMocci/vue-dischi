@@ -25,26 +25,26 @@ export default {
 
 <style lang="scss" scoped>
 .disco{
-    display: flex;
-    justify-content: center;
-
+    margin-right: 25px;
+    
     .img-container{
         background-color: #2E3A46;
-        width: 150px;
+        width: 140px;
         height: 250px;
         margin-top: 20px;
+        padding-top: 15px;
 
         img{
-        width: 115px;
-        margin: 15px auto;
+        width: 110px;
+        margin: auto;
         display: flex;
         align-items: center;
         }
         .text{
             text-align: center;
-            padding-bottom: 35px;
+            padding: 15px 0 35px 0;
             h4{
-                padding: 0 10px 0 12px;
+                padding: 0 10px 10px 12px;
                 color: white;
                 text-transform: uppercase;
             }

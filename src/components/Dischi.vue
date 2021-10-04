@@ -40,13 +40,9 @@ export default {
     .contenitore-img{
         display: flex;
         flex-wrap: wrap;
-        max-width: 70%;
+        max-width: 60%;
         margin: auto;
         padding-top: 35px;
-
-        .img{
-           margin-right: 25px;
-        }
     }
 }
 </style>
