@@ -1,11 +1,11 @@
 <template>
     <div class="disco">
         <div class="img-container">
-            <img src='https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg' alt="">
+            <img :src="info.poster" :alt="info.title">
             <div class="text">
-                <h3>NEW JERSEY</h3>
-                <div>Bon Jovi</div>
-                <div>1988</div>
+                <h4>{{info.title}}</h4>
+                <div>{{info.author}}</div>
+                <div>{{info.year}}</div>
             </div>
         </div>
     </div>
@@ -14,10 +14,11 @@
 
 <script>
 export default {
-    name: "Disco"
-    // props: {
-    //     info: object
-    // }
+    name: "Disco",
+    props: {
+        info: Object
+    },
+    // props: ['info']
     
 }
 </script>
@@ -29,24 +30,27 @@ export default {
 
     .img-container{
         background-color: #2E3A46;
-        width: 180px;
-        margin-top: 30px;
-        
+        width: 150px;
+        height: 250px;
+        margin-top: 20px;
+
         img{
-        width: 140px;
+        width: 115px;
         margin: 15px auto;
         display: flex;
         align-items: center;
         }
         .text{
             text-align: center;
-            padding-bottom: 60px;
-            h3{
-                padding-bottom: 15px;
+            padding-bottom: 35px;
+            h4{
+                padding: 0 10px 0 12px;
                 color: white;
+                text-transform: uppercase;
             }
             div{
                 color: grey;
+                font-size: 13px;
             }
         }
     }
