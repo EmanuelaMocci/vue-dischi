@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
-    <Dischi/>
+    <Header @selectGenres = "selectedGenres" :genres="genreList"/>
+    <Dischi :selectedGenre= "selectedGenre" @genreList="genreListEvent"/>
   </div>
 </template>
 
@@ -14,6 +14,20 @@ export default {
   components: {
     Header,
     Dischi
+  },
+  data() {
+    return {
+      selectedGenre: "",
+      genreList: []
+    }
+  },
+  methods: {
+    selectedGenres(selectedGenre) {
+      this.selectedGenre = selectedGenre;
+    },
+    genreListEvent(list) {
+      this.genreList = list;
+    }
   }
 }
 </script>
